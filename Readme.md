@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Леся Цырульникова](https://up.htmlacademy.ru/adaptive/13/user/567679).
-* Наставник: `Неизвестно`.
+* Наставник: `Владислав Балабанович`.
 
 ---
 
