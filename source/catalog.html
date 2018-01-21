@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav>
+      <div class="main-header__top">
+        <a class="main-header__logo" href="index.html">
+          <img class="main-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Магазин вязаных игрушек и аксессуаров для дома">
+        </a>
+        <button class="main-header__toggle-menu">Открыть меню</button>
+      </div>
+      <ul class="main-header__menu main-header__menu--closed nav-list">
+        <li class="nav-list__item">
+          <a>Каталог товаров</a>
+        </li>
+        <li class="nav-list__item">
+          <a href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="nav-list__item">
+          <a>Поиск по сайту</a>
+        </li>
+        <li class="nav-list__item">
+          <a>Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content">
+    <h1 class="main-content__header main-content__header--gray-back">Каталог товаров</h1>
+    <section class="catalog">
+      <h2 class="visually-hidden">Список товаров магазина</h2>
+      <ul class="catalog__list">
+        <li class="catalog__item product">
+          <article class="product__wrap">
+            <img class="product__img" src="http://placehold.it/260x195" width="260" height="195" alt="Вязаная игрушка зайчик-попрыгайчик">
+            <h3 class="product__header">Зайчик-попрыгайчик</h3>
+            <p class="product__descr">Рост 30 см, вес 200 г</p>
+            <span class="product__price">200 руб.</span>
+            <button class="product__add-to-cart">Добавить в корзину</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product__wrap">
+            <img class="product__img" src="http://placehold.it/260x195" width="260" height="195" alt="Вязаная корзинка для белья">
+            <h3 class="product__header">Корзинка для белья</h3>
+            <p class="product__descr">Диаметр 15 см, высота 10 см</p>
+            <span class="product__price">690 руб.</span>
+            <button class="product__add-to-cart">Добавить в корзину</button>
+          </article>
+        </li>
+        <li class="catalog__item">
+          <article class="product__wrap">
+            <img class="product__img" src="http://placehold.it/260x195" width="260" height="195" alt="Большая вязаная корзинка для игрушек">
+            <h3 class="product__header">Большая корзинка для игрушек</h3>
+            <p class="product__descr">Диаметр 30 см, высота 30 см</p>
+            <span class="product__price">1 500 руб.</span>
+            <button class="product__add-to-cart">Добавить в корзину</button>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <section class="production">
+      <h2 class="production__header">Процесс производства</h2>
+      <figure class="production__video-wrapper">
+        <video class="production__video" width="260" controls src="" poster="http://placehold.it/260x150" alt="Видео процесса производства"></video>
+        <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      </figure>
+      <button class="production__order ghost-button">Сделать заказ</button>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__social">
+      <ul class="main-footer__social-list social-list">
+        <li class="social-list__item">
+          <a>instagram</a>
+        </li>
+        <li class="social-list__item">
+          <a>facebook</a>
+        </li>
+        <li class="social-list__item">
+          <a>twitter</a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-footer__about-cite made-by">
+      <span class="made-by__text">Разработано</span>
+      <a class="made-by__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="made-by__studio-logo" src="http://placehold.it/27x34" width="27" height="34" alt="студия-разработчик">
+      </a>
+    </div>
+  </footer>
+  <section class="cart-filter popup popup--hidden">
+    <h2 class="cart-filter__header">Добавить в корзину</h2>
+    <form class="cart-filter__form">
+      <p class="cart-filter__text">Выберите размер:</p>
+      <ul class="cart-filter__list">
+        <li class="cart-filter__item">
+          <button type="button">S</button>
+        </li>
+        <li class="cart-filter__item">
+          <button type="button">M</button>
+        </li>
+        <li class="cart-filter__item">
+          <button type="button">L</button>
+        </li>
+      </ul>
+      <button class="cart-filter__add" type="submit">Добавить</button>
+    </form>
+  </section>
+  <div class="light-wrapper"></div>
+</body>
+</html>
