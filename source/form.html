@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav>
+      <a class="main-header__logo" href="index.html">
+        <img class="main-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Магазин вязаных игрушек и аксессуаров для дома">
+      </a>
+      <button class="main-header__toggle-menu">Открыть меню</button>
+      <ul class="main-header__menu main-header__menu--closed nav-list">
+        <li class="nav-list__item">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="nav-list__item">
+          <a>Вязание на заказ</a>
+        </li>
+        <li class="nav-list__item">
+          <a>Поиск по сайту</a>
+        </li>
+        <li class="nav-list__item">
+          <a>Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-content">
+    <div class="main-content__header-wrapper">
+      <h1 class="main-content__header">Вязание на заказ</h1>
+    </div>
+    <section class="product-order">
+      <h2 class="visually-hidden">Форма заказа вязания</h2>
+      <p class="product-order__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить
+        детали.
+      </p>
+      <form class="product-order__form">
+        <fieldset class="product-order__wrapper">
+          <legend class="product-order__legend">Тип</legend>
+          <ul class="product-order__fields">
+            <li class="product-order__field">
+              <input class="product-order__input" type="radio" name="type">
+              <label class="product-order__label">Аксессуар для интерьера</label>
+            </li>
+            <li class="product-order__field">
+              <input class="product-order__input" type="radio" name="type">
+              <label class="product-order__label">Детская игрушка</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="product-order__wrapper">
+          <legend class="product-order__legend">Цвет</legend>
+          <ul class="product-order__fields">
+            <li class="product-order__field">
+              <input class="product-order__input" type="checkbox">
+              <label class="product-order__label">Белый</label>
+            </li>
+            <li class="product-order__field">
+              <input class="product-order__input" type="checkbox">
+              <label class="product-order__label">Серый</label>
+            </li>
+            <li class="product-order__field">
+              <input class="product-order__input" type="checkbox">
+              <label class="product-order__label">«Тиффани»</label>
+            </li>
+            <li class="product-order__field">
+              <input class="product-order__input" type="checkbox">
+              <label class="product-order__label">Черный</label>
+            </li>
+            <li class="product-order__field">
+              <input class="product-order__input" type="checkbox">
+              <label class="product-order__label">Розовый</label>
+            </li>
+            <li class="product-order__field">
+              <input class="product-order__input" type="checkbox">
+              <label class="product-order__label">Оранжевый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="product-order__wrapper">
+          <legend class="product-order__legend">ФИО</h3>
+            <ul class="product-order__fields">
+              <li class="product-order__field">
+                <label class="product-order__label">Имя:</label>
+                <input class="product-order__input" type="text" placeholder="Введите ваше имя*">
+              </li>
+              <li class="product-order__field">
+                <label class="product-order__label">Фамилия:</label>
+                <input class="product-order__input" type="text" placeholder="Укажите фамилию*">
+              </li>
+              <li class="product-order__field">
+                <label class="product-order__label">Отчество:</label>
+                <input class="product-order__input" type="text" placeholder="Отчество, если желаете">
+              </li>
+            </ul>
+        </fieldset>
+        <fieldset class="product-order__wrapper">
+          <legend class="product-order__legend">Тел</legend>
+          <input class="product-order__input" type="tel" placeholder="+7 ХХХ ХХ ХХ*">
+        </fieldset>
+        <fieldset class="product-order__wrapper">
+          <legend class="product-order__legend">E-mail</legend>
+          <input class="product-order__input" type="email" placeholder="Ваш Email*">
+        </fieldset>
+        <fieldset class="product-order__wrapper">
+          <legend class="product-order__legend">Доп</legend>
+          <textarea class="product-order__input" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+        <p class="product-order__note">*Поля обязательны для заполнения</p>
+        <button class="product-order__submit">Отправить заказ</button>
+      </form>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__social">
+      <ul class="main-footer__social-list social-list">
+        <li class="social-list__item">
+          <a>instagram</a>
+        </li>
+        <li class="social-list__item">
+          <a>facebook</a>
+        </li>
+        <li class="social-list__item">
+          <a>twitter</a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-footer__about-cite made-by">
+      <span class="made-by__text">Разработано</span>
+      <a class="made-by__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img class="made-by__studio-logo" src="http://placehold.it/27x34" width="27" height="34" alt="студия-разработчик">
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
