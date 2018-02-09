@@ -1,26 +1,26 @@
-
-.contacts__content-wrapper {
-  .mobile-content-centering-wrapper();
-  padding-top: 71px;
+.contacts .content-wrapper {
+  padding: 0;
+  margin-bottom: 106px
 }
 
 .contacts__header {
-  .set-font-17-medium-30-black();
+  .set-font(17px, 30px, bold, @black);
   margin: 0;
   padding-left: 29px;
-  padding-right: 29px;
+  padding-top: 87px;
+  padding-bottom: 25px;
 }
 
-.contacts__content-wrapper ul.contacts__list {
-  .set-font-regular-30-gray();
-  padding: 26px 29px 8px;
+ul.contacts__list {
+  padding-left: 29px;
 }
 
 .contacts__item {
-  padding-bottom: 29px;
+  .set-font(15px, 30px, normal, @dark-gray);
+  padding-bottom: 30px;
 }
 
-.contacts__item-name{
+.contacts__item-name {
   display: inline-block;
   vertical-align: top;
   padding-right: 27px;
@@ -37,6 +37,85 @@
   text-decoration-color: @turquoise;
 }
 
-.contacts__mail {
-  margin: 33px 29px 39px;
+.contacts__mail.ghost-button {
+  margin: 32px auto 40px;
 }
+
+.contacts__map-wrapper {
+  margin-top: 8px;
+}
+
+@media (min-width:750px) {
+  .contacts__header {
+    .set-font(43px, 50px, bold, @black);
+    padding-top: 112px;
+    padding-bottom: 49px;
+    padding-left: 51px;
+  }
+
+  ul.contacts__list {
+    display: flex;
+    justify-content: center;
+    padding-left: 51px;
+  }
+
+  .contacts__item {
+    width: 330px;
+  }
+
+  .contacts__item-value {
+    width: 250px;
+  }
+
+  .contacts__map-wrapper {
+    margin-top: 56px;
+  }
+
+  .contacts__mail.ghost-button {
+    margin: 49px auto 58px;
+    width: 230px;
+  }
+}
+
+@media (min-width:1050px)  {
+  .contacts .content-wrapper {
+    margin-top: 176px;
+    padding-left: 223px;
+    padding-right: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 457px;
+  }
+
+  .contacts__header {
+    padding-top: 72px;
+    padding-left: 0;
+    .set-font(53px, 57px, bold, @black);
+    width: 355px;
+    order: 1;
+  }
+
+  ul.contacts__list {
+    width: 355px;
+    padding-left: 0;
+    flex-direction: column;
+    order: 2;
+  }
+
+  .contacts__mail.ghost-button {
+    margin-top: 77px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 0;
+    order: 3;
+  }
+
+  .contacts__map-wrapper {
+    width: 525px;
+    margin-top: 0;
+    order: 4;
+  }
+
+}
+

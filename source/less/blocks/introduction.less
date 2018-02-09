@@ -1,35 +1,123 @@
 
 
-.introduction__content-wrapper {
-  .mobile-content-centering-wrapper();
+.introduction {
   background-color: @white;
   background-image: url(../img/hero-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-position-x: center;
+  background-position-x: 50%;
   background-position-y: -20px;
+  background-size: 575px auto;
 }
 
 .introduction__header {
-  .set-font-header-bold-black();
+  .set-font(27px, 30px, bold, @black);
   text-align: center;
   margin: 0;
   padding-top: 69px;
-  padding-left: 38px;
-  padding-right: 38px;
   padding-bottom: 122px;
 }
 
+.introduction__ref-item .content-wrapper {
+  padding: 0;
+}
+
+.introduction__ref-item {
+  background-color: #63d1bb;
+}
 
 .introduction__ref {
-  .set-font-19-medium-white();
+  .set-font(19px, 24px, bold, @white);
   display: block;
   padding-left: 29px;
   padding-top: 26px;
   padding-bottom: 29px;
   padding-right: 180px;
-  background-color: #63d1bb;
 }
 
 .introduction__ref--active {
   background-color: @turquoise-overlay;
 }
+
+@media (min-width:750px) {
+  .introduction {
+    background: @white-gray;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-image: url(../img/hero-desktop.jpeg);
+    background-position-y: -1px;
+    background-size: 1150px auto;
+  }
+
+  .introduction__header {
+    .set-font(43px,50px,bold,@black);
+    padding-top: 152px;
+    padding-bottom: 372px;
+  }
+
+  .introduction__ref-item {
+    background-color: transparent;
+    flex-basis: 385px;
+  }
+
+  .introduction__ref {
+    background-color: @turquoise;
+  }
+
+  .introduction__ref--active {
+    background-color: @turquoise-overlay;
+  }
+
+  .introduction__ref-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .introduction__ref-item--interior .content-wrapper {
+    padding-left: 51px;
+  }
+
+  .introduction__ref-item--toys .content-wrapper {
+    padding-right: 51px;
+  }
+
+}
+
+@media (min-width:1050px) {
+  .introduction {
+    background-image: url(../img/hero-desktop.jpeg);
+    background-position-y: -1px;
+    background-size: 1150px auto;
+  }
+
+  .introduction__header {
+    .set-font(53px,57px,bold,@black);
+    padding-top: 152px;
+    padding-bottom: 359px;
+    width: 615px;
+    margin: 0 auto;
+  }
+
+  .introduction__ref-item {
+    flex-basis: 525px;
+  }
+
+  .introduction__ref {
+    padding-left: 37px;
+    padding-top: 31px;
+    padding-bottom: 27px;
+    line-height: 29px;
+  }
+
+  .introduction__ref div {
+    width: 121px;
+  }
+
+  .introduction__ref-item--interior .content-wrapper {
+    padding-left: 0;
+  }
+
+  .introduction__ref-item--toys .content-wrapper {
+    padding-right: 0;
+  }
+}
+
