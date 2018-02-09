@@ -1,5 +1,5 @@
 .main-content {
-  .set-font-regular-black();
+  .set-font(15px, 24px, normal, @black);
   background-color: #ffffff;
 }
 
@@ -9,17 +9,22 @@
   margin: 0;
 }
 
-.main-content__header-wrapper {
-  .mobile-content-centering-wrapper();
-  padding: 70px 36px 75px;
-  background-color: @gray;
+.header-wrapper .main-content__header {
+  .set-font(27px, 30px, bold, @black);
 }
-
-.main-content__header-wrapper .main-content__header {
-  .set-font-header-bold-black();
-}
-
 
 .main-content__header {
   margin: 0;
+}
+
+@media (min-width:750px) {
+  .header-wrapper .main-content__header {
+    .set-font(43px, 50px, bold, @black);
+  }
+}
+
+@media (min-width:1050px) {
+  .header-wrapper .main-content__header {
+    .set-font(53px, 57px, bold, @black);
+  }
 }
