@@ -1,30 +1,103 @@
 .product {
   border: 1px solid @gray;
-  //padding: 20px 29px 30px;
 }
 
 .product__header {
-  .set-font-medium-black();
+  .set-font(17px, 24px, bold, @black);
   margin: 0;
-  padding: 20px 29px 5px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.product__link--image {
+  display: block;
+  width: 260px;
 }
 
 .product__descr {
-  .set-font-mini-30-black();
+  .set-font(13px, 30px, normal, @black);
   margin: 0;
-  padding: 0px 29px 23px;
+  padding-bottom: 25px;
 }
 
 .product__info {
-  .set-font-mini-30-black();
+  .set-font(13px, 30px, normal, @black);
   margin: 0;
   padding-bottom: 19px;
-  border-bottom: 1px solid @gray;
+  //border-bottom: 1px solid @gray;
 }
 
-
+.product__purchase {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 23px;
+  border-top: 1px solid #f1f1f1;
+}
 .product__price {
-  .set-font-15-medium-black();
+  .set-font(15px, 24px, bold, @black);
   display: inline-block;
-  padding-top: 21px;
+}
+
+.product__add-to-cart {
+  width: 21px;
+  height: 18px;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url(../img/icon-cart.svg);
+  background-repeat:  no-repeat;
+  background-position: 50% 0;
+  background-size: contain;
+  padding: 0;
+  border: 0;
+}
+
+@media (min-width:750px) {
+  .product__link--image {
+    width: 334px;
+    flex-shrink: 0;
+  }
+
+  .product__header {
+    .set-font(20px, 24px, bold, @black);
+    padding-top: 26px;
+    flex-basis: 50px;
+  }
+  
+  .product__descr {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 278px;
+  }
+
+  .product__info {
+    .set-font(15px, 30px, normal, @dark-gray);
+  }
+
+  .product__price {
+    .set-font(17px, 24px, bold, @black);
+  }
+
+  .product__purchase {
+    margin-top: auto;
+  }
+}
+
+@media (min-width:1050px) {
+  .product__link--image {
+    width: 316px;
+    flex-basis: 462px;
+    flex-shrink: 0;
+  }
+
+  .product__info {
+    padding-bottom: 0;
+  }
+
+  .product__purchase {
+    margin-top: 0;
+  }
+
+  .product__descr {
+    justify-content: space-between;
+  }
 }
