@@ -1,10 +1,4 @@
 
-.production .content-wrapper {
-  width: 260px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .production__wrapper {
   border: 1px solid @gray;
   margin-bottom: 59px;
@@ -35,13 +29,7 @@
   margin-bottom: 31px;
 }
 
-@media(min-width:750px) {
-  .production .content-wrapper {
-    width: auto;
-    padding-left: 51px;
-    padding-right: 51px;
-  }
-
+@media (min-width: 750px) {
   .production__wrapper {
     display: flex;
     flex-direction: column;
@@ -71,13 +59,14 @@
     order: 4;
     width: auto;
     margin-left: 40px;
-    margin-right: 40px; 
+    margin-right: 40px;
     margin-bottom: 46px;
   }
 }
-@media(min-width:1050px) {
+
+@media (min-width: 1050px) {
   .production__wrapper {
-    flex-wrap:  wrap;
+    flex-wrap: wrap;
     align-items: center;
     height: 455px;
   }
@@ -95,7 +84,5 @@
 
   .production__order.ghost-button {
     width: 230px;
-    //margin: 0 auto;
   }
-
 }

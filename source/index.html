@@ -10,51 +10,49 @@
 
 <body>
   <header class="main-header">
-    <div class="content-wrapper">
-      <nav>
-        <a class="main-header__logo">
-          <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин вязаных игрушек и аксессуаров для дома">
-        </a>
-        <button class="main-header__toggle-menu main-header__toggle-menu--open">Открыть меню</button>
-        <ul class="main-header__menu">
-          <li class="main-header__menu-item">
-            <a class="main-header__link main-header__link--catalog" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="main-header__menu-item">
-            <a class="main-header__link main-header__link--order" href=form.html>Вязание на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-header__user-menu">
-          <li class="main-header__user-menu-item main-header__user-menu-item--search">
-            <svg class="main-header__icon main-header__icon--search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6"
-              xml:space="preserve">
-              <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"
-              />
-            </svg>
-            <a class="main-header__link main-header__link--search">Поиск по сайту</a>
-          </li>
-          <li class="main-header__user-menu-item main-header__user-menu-item--cart">
-            <svg class="main-header__icon main-header__icon--cart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849"
-              xml:space="preserve">
-              <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"
-              />
-            </svg>
-            <a class="main-header__link main-header__link--cart">Корзина: пока пуста</a>
-          </li>
-        </ul>
-        <ul class="main-header__aside">
-          <li class="main-header__aside-item">
-            <a class="main-header__link main-header__link--updates">Новые поступления</a>
-          </li>
-          <li class="main-header__aside-item">
-            <a class="main-header__link main-header__link--sale">Распродажа</a>
-          </li>
-        </ul>
-        <p class="main-header__info">Бесплатная доставка по России</p>
-      </nav>
-    </div>
+    <nav class="main-header__wrapper content-wrapper">
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин вязаных игрушек и аксессуаров для дома">
+      </a>
+      <button class="main-header__toggle-menu main-header__toggle-menu--open">Открыть меню</button>
+      <ul class="main-header__menu main-header__menu--closed">
+        <li class="main-header__menu-item">
+          <a class="main-header__link main-header__link--catalog" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-header__menu-item">
+          <a class="main-header__link main-header__link--order" href=form.html>Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="main-header__user-menu main-header__user-menu--closed">
+        <li class="main-header__user-menu-item main-header__user-menu-item--search">
+          <svg class="main-header__icon main-header__icon--search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6"
+            xml:space="preserve">
+            <path fill="#231F20" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699 S-0.8,2.646-0.8,6.899s3.446,7.7,7.699,7.7c1.734,0,3.326-0.58,4.613-1.546l3.417,3.416c0.203,0.202,0.418,0.33,0.771,0.33 c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5 s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"
+            />
+          </svg>
+          <a class="main-header__link main-header__link--search">Поиск по сайту</a>
+        </li>
+        <li class="main-header__user-menu-item main-header__user-menu-item--cart">
+          <svg class="main-header__icon main-header__icon--cart" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px" y="0px" width="20.294px" height="18.849px" viewBox="264.205 370.961 20.294 18.849" enable-background="new 264.205 370.961 20.294 18.849"
+            xml:space="preserve">
+            <path fill="#231F20" d="M283.75,378.19h-3.151l-3.407-6.814c-0.185-0.37-0.634-0.52-1.006-0.335 c-0.371,0.186-0.521,0.636-0.335,1.006l3.071,6.143h-9.138l3.072-6.143c0.185-0.371,0.035-0.821-0.335-1.006 c-0.37-0.185-0.821-0.035-1.006,0.335l-3.407,6.814h-3.151c-0.414,0-0.75,0.336-0.75,0.75s0.336,0.75,0.75,0.75h0.157l0.855,2.991 c-0.187,0.137-0.316,0.347-0.316,0.595c0,0.396,0.309,0.71,0.697,0.739l1.656,5.795h12.697l1.656-5.795 c0.388-0.028,0.698-0.344,0.698-0.739c0-0.249-0.129-0.459-0.316-0.596l0.854-2.991h0.157c0.414,0,0.75-0.336,0.75-0.75 S284.164,378.19,283.75,378.19z M279.569,388.311h-10.433l-1.224-4.284h12.881L279.569,388.311z M281.222,382.526h-13.739 l-0.81-2.836h15.359L281.222,382.526z"
+            />
+          </svg>
+          <a class="main-header__link main-header__link--cart">Корзина: пока пуста</a>
+        </li>
+      </ul>
+      <ul class="main-header__aside">
+        <li class="main-header__aside-item">
+          <a class="main-header__link main-header__link--updates">Новые поступления</a>
+        </li>
+        <li class="main-header__aside-item">
+          <a class="main-header__link main-header__link--sale">Распродажа</a>
+        </li>
+      </ul>
+      <p class="main-header__info">Бесплатная доставка по России</p>
+    </nav>
   </header>
   <main class="main-content">
     <h1 class="main-content__header visually-hidden">Магазин вязаных игрушек и аксессуаров для дома</h1>
@@ -62,31 +60,28 @@
       <div class="content-wrapper">
         <h2 class="introduction__header">Милые штуки ручной работы для дома</h2>
       </div>
-      <ul class="introduction__ref-list">
-        <li class="introduction__ref-item introduction__ref-item--interior">
-          <div class="content-wrapper">
+      <div class="introduction__ref-wrapper content-wrapper">
+        <ul class="introduction__ref-list">
+          <li class="introduction__ref-item introduction__ref-item--interior">
             <a class="introduction__ref">
               <div>Предметы интерьера</div>
             </a>
-          </div>
-        </li>
-        <li class="introduction__ref-item introduction__ref-item--toys">
-          <div class="content-wrapper">
+          </li>
+          <li class="introduction__ref-item introduction__ref-item--toys">
             <a class="introduction__ref introduction__ref--active">
               <div>Детские игрушки</div>
             </a>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="promo-product">
-      <div class="content-wrapper">
+      <div class="content-wrapper promo-product__wrapper">
         <div class="promo-product__header-wrapper">
           <h2 class="promo-product__header">Вязаные корзинки</h2>
           <div class="promo-product__label">Товар недели</div>
         </div>
-        <div class="promo-product__wrapper">
+        <div class="promo-product__body-wrapper">
           <p class="promo-product__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <ul class="promo-product__features-list">
             <li class="promo-product__feature-item">
@@ -102,28 +97,27 @@
               <span class="promo-product__feature-value">15 см</span>
             </li>
           </ul>
-          <img class="promo-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Три вязаные корзинки разных">
+          <img class="promo-product__image" src="img/content/triple-set-mobile@1x.jpg" width="260" height="315" alt="Три вязаные корзинки разных">
           <div class="promo-product__price">Цена: 990 руб.</div>
           <a class="promo-product__order ghost-button ghost-button--big">заказать</a>
         </div>
       </div>
     </section>
     <section class="summary">
-      <div class="content-wrapper">
+      <div class="summary__wrapper content-wrapper">
         <h2 class="summary__header">Коротко о нас:</h2>
         <ul class="summary__list">
-          <li class="summary__item">Экологически
-            <br> чистые материалы</li>
-          <li class="summary__item">Скандинавский стиль по российской цене</li>
-          <li class="summary__item">Увеличивает лайки на фотографиях</li>
+          <li class="summary__item">Экологически<br> чистые материалы</li>
           <li class="summary__item">Связано вручную с любовью и умилением</li>
+          <li class="summary__item">Скандинавский стиль по российской цене</li>
           <li class="summary__item">Поддержка отечественного производителя</li>
+          <li class="summary__item">Увеличивает лайки на фотографиях</li>
           <li class="summary__item">Поставляется в подарочной упаковке</li>
         </ul>
       </div>
     </section>
     <section class="feedback">
-      <div class="content-wrapper">
+      <div class="feedback__wrapper content-wrapper">
         <h2 class="feedback__header">Отзывы</h2>
         <div class="feedback__slider slider">
           <blockquote class="feedback__item slider__item">
@@ -136,14 +130,14 @@
             </cite>
           </blockquote>
           <div class="slider__controls">
-            <a class="slider__controls--backward">Предыдущий
+            <a class="slider__control slider__control--backward">Предыдущий
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
                 <polygon points="50,11.002 7.659,11.002 15.833,2.828 13.005,0 0,12.998 0.003,13.001 0,13.005 13.005,26.003 15.833,23.175 7.661,15.002 50,15.002 "
                 />
               </svg>
             </a>
-            <a class="slider__controls--forward">Следующий
+            <a class="slider__control slider__control--forward">Следующий
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="50px" height="26.003px" viewBox="0 0 50 26.003" enable-background="new 0 0 50 26.003" xml:space="preserve">
                 <polygon points="0,11.002 42.341,11.002 34.166,2.828 36.995,0 50,12.998 49.996,13.001 50,13.005 36.995,26.003 34.166,23.175 42.339,15.002 0,15.002 "
@@ -156,7 +150,7 @@
       </div>
     </section>
     <section class="contacts">
-      <div class="content-wrapper">
+      <div class="contacts__wrapper content-wrapper">
         <h2 class="contacts__header">Контакты</h2>
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -176,9 +170,9 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="content-wrapper">
+    <div class="main-footer__wrapper content-wrapper">
       <a class="main-footer__logo">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин вязаных игрушек и аксессуаров для дома">
+        <img class="main-footer__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин вязаных игрушек и аксессуаров для дома">
       </a>
       <div class="main-footer__social">
         <ul class="main-footer__social-list social-list">
@@ -240,13 +234,16 @@
         <p class="cart-filter__text">Выберите размер:</p>
         <ul class="cart-filter__list">
           <li class="cart-filter__item">
-            <input class="cart-filter__size-option" type="radio" name="input-size">S</input>
+            <label class="cart-filter__label">S</label>
+            <input class="cart-filter__size-option" type="radio" name="input-size" value="S" />
           </li>
           <li class="cart-filter__item">
-            <input class="cart-filter__size-option" type="radio" name="input-size">M</input>
+            <label class="cart-filter__label">M</label>
+            <input class="cart-filter__size-option" type="radio" name="input-size" value="M" />
           </li>
           <li class="cart-filter__item">
-            <input class="cart-filter__size-option" type="radio" name="input-size">L</input>
+            <label class="cart-filter__label">L</label>
+            <input class="cart-filter__size-option" type="radio" name="input-size" value="L" />
           </li>
         </ul>
         <button class="cart-filter__add" type="submit">Добавить</button>
@@ -254,6 +251,6 @@
     </div>
   </section>
   <div class="light-wrapper light-wrapper--hidden"></div>
+  <script src="js/script.js"></script>
 </body>
-
 </html>

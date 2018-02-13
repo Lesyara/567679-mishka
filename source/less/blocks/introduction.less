@@ -2,7 +2,7 @@
 
 .introduction {
   background-color: @white;
-  background-image: url(../img/hero-mobile@1x.jpg);
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-position-y: -20px;
@@ -17,8 +17,9 @@
   padding-bottom: 122px;
 }
 
-.introduction__ref-item .content-wrapper {
-  padding: 0;
+.introduction__ref-wrapper {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .introduction__ref-item {
@@ -38,12 +39,12 @@
   background-color: @turquoise-overlay;
 }
 
-@media (min-width:750px) {
+@media (min-width: 750px) {
   .introduction {
     background: @white-gray;
     background-repeat: no-repeat;
     background-position-x: 50%;
-    background-image: url(../img/hero-desktop.jpeg);
+    background-image: url("../img/hero-desktop@1x.jpg");
     background-position-y: -1px;
     background-size: 1150px auto;
   }
@@ -52,6 +53,11 @@
     .set-font(43px,50px,bold,@black);
     padding-top: 152px;
     padding-bottom: 372px;
+  }
+
+  .introduction__ref-wrapper {
+    padding-left: 51px;
+    padding-right: 51px;
   }
 
   .introduction__ref-item {
@@ -71,20 +77,11 @@
     display: flex;
     justify-content: center;
   }
-
-  .introduction__ref-item--interior .content-wrapper {
-    padding-left: 51px;
-  }
-
-  .introduction__ref-item--toys .content-wrapper {
-    padding-right: 51px;
-  }
-
 }
 
-@media (min-width:1050px) {
+@media (min-width: 1050px) {
   .introduction {
-    background-image: url(../img/hero-desktop.jpeg);
+    background-image: url("../img/hero-desktop@1x.jpg");
     background-position-y: -1px;
     background-size: 1150px auto;
   }
@@ -95,6 +92,11 @@
     padding-bottom: 359px;
     width: 615px;
     margin: 0 auto;
+  }
+
+  .introduction__ref-wrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .introduction__ref-item {
@@ -110,14 +112,6 @@
 
   .introduction__ref div {
     width: 121px;
-  }
-
-  .introduction__ref-item--interior .content-wrapper {
-    padding-left: 0;
-  }
-
-  .introduction__ref-item--toys .content-wrapper {
-    padding-right: 0;
   }
 }
 

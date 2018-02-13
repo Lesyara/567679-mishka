@@ -1,4 +1,9 @@
 
+.main-header__wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .main-header__toggle-menu--open {
   background-image: url("../img/icon-menu-open.svg");
   background-size: 20px 14px;
@@ -45,9 +50,13 @@
 .main-header__info {
   margin: 0;
   display: none;
-} 
+}
 
 .main-header__menu {
+  display: block;
+}
+
+.main-header__menu--closed {
   display: none;
 }
 
@@ -60,6 +69,10 @@
 }
 
 .main-header__user-menu {
+  display: block;
+}
+
+.main-header__user-menu--closed {
   display: none;
 }
 
@@ -74,6 +87,7 @@
 .main-header__link {
   .set-font(17px, 24px, bold, @black);
   text-decoration: none;
+  padding-left: 42px;
 }
 
 .main-header__user-menu-item .main-header__link {
@@ -89,8 +103,13 @@
   text-align: center;
 }
 
-@media (min-width:750px) {
-  
+@media (min-width: 750px) {
+  .main-header__wrapper {
+    padding-left: 51px;
+    padding-right: 51px;
+  }
+
+
   .main-header nav {
     height: 88px;
     display: flex;
@@ -107,8 +126,12 @@
   }
 
   .main-header__icon {
-   width: 18px;
-   height: 18px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .main-header__link {
+    padding-left: 0;
   }
 
   .main-header__link--search {
@@ -155,12 +178,12 @@
     padding-left: 35px;
   }
 
-  .main-header__user-menu-item--search{
+  .main-header__user-menu-item--search {
     flex-basis: 82px;
     border-left: 1px solid @gray;
     border-right: 1px solid @gray;
   }
-  
+
   .main-header__user-menu-item--cart {
     flex-basis: 263px;
   }
@@ -177,10 +200,16 @@
   }
 }
 
-@media (min-width:1050px) {
+@media (min-width: 1050px) {
+  .main-header__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .main-header__aside {
     display: flex;
+    .set-font(15px, 24px, bold, @black);
+    order: 4;
   }
 
   .main-header__aside-item {
@@ -188,7 +217,7 @@
     padding-right: 60px;
   }
 
-  .main-header__aside-item .main-header__link{
+  .main-header__aside-item .main-header__link {
     .set-font(15px, 24px, bold, @black);
   }
 
@@ -220,11 +249,5 @@
     order: 3;
     flex-basis: 360px;
   }
-
-  .main-header__aside {
-    .set-font(15px, 24px, bold, @black);
-    order: 4;
-  }
-
 }
 
