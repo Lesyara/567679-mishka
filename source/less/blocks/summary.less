@@ -1,13 +1,56 @@
+.summary__wrapper {
+  position: relative;
+}
+
+.summary__wrapper::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  width: 320px;
+  height: 6px;
+  left: 0;
+  top: 26px;
+}
 
 .summary__header {
   margin: 0;
-  .set-font(25px, 30px, bold, @black);
   padding-top: 70px;
+  .set-font(25px, 30px, bold, @black);
 }
 
 .summary__item {
-  .set-font(17px, 20px, bold, @black);
   padding-top: 83px;
+  .set-font(17px, 20px, bold, @black);
+  background-repeat: no-repeat;
+  background-position: 3% 35%;
+
+  &--eco {
+    background-image: url("../img/icon-feature-flower.svg");
+  }
+
+  &--hand-made {
+    background-image: url("../img/icon-feature-ball.svg");
+  }
+
+  &--style {
+    background-image: url("../img/icon-feature-money.svg");
+  }
+
+  &--native {
+    background-image: url("../img/icon-feature-rocket.svg");
+  }
+
+  &--likes {
+    background-image: url("../img/icon-feature-heart.svg");
+  }
+
+  &--packaging {
+    background-image: url("../img/icon-feature-gift.svg");
+  }
 }
 
 .summary__item:last-child {
@@ -17,6 +60,20 @@
 @media (min-width: 750px) {
   .summary__wrapper {
     margin-bottom: 74px;
+  }
+
+  .summary__wrapper::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    transform: rotateX(180deg);
+    width: 100%;
+    height: 16px;
+    left: 0;
+    top: 52px;
   }
 
   .summary__header {
@@ -32,9 +89,33 @@
   }
 
   .summary__item {
-    .set-font(20px, 22px, bold, @black);
     width: 295px;
     padding-top: 107px;
+    .set-font(20px, 22px, bold, @black);
+
+    &--eco {
+      background-position: 3% 45%;
+    }
+
+    &--hand-made {
+      background-position: 3% 45%;
+    }
+
+    &--style {
+      background-position: 3% 45%;
+    }
+
+    &--native {
+      background-position: 3% 45%;
+    }
+
+    &--likes {
+      background-position: 3% 45%;
+    }
+
+    &--packaging {
+      background-position: 3% 45%;
+    }
   }
 
   .summary__item:nth-child(3n) {
@@ -49,8 +130,25 @@
     padding-right: 174px;
   }
 
+  .summary__wrapper::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    transform: rotateX(180deg);
+    width: 100%;
+    height: 23px;
+    left: 0;
+    top: 77px;
+  }
+
   .summary__header {
-    .set-font(53px, 57px, bold, @black);
     padding-top: 159px;
+    .set-font(53px,
+    57px,
+    bold,
+    @black);
   }
 }

@@ -7,9 +7,92 @@
 
 .cart-filter p {
   margin: 0;
+  .set-font(17px, 30px, normal, @black);
+  text-align: center;
 }
 
 .cart-filter__header {
-  margin: 0;
+  .set-font(25px, 30px, bold, @black, uppercase);
+  width: 148px;
+  margin: 31px auto 13px;
 }
 
+.cart-filter__wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -160px;
+  margin-top: -168px;
+  width: 320px;
+  height: 336px;
+  background-color: @white;
+  box-shadow: 5px 5px 10px 0 @black-025;
+  border: 1px solid @border-gray;
+  z-index: 300;
+}
+
+ul.cart-filter__list {
+  width: 260px;
+  margin: 18px auto 32px;
+}
+
+.cart-filter__item {
+  display: inline-block;
+  padding-right: 2px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.cart-filter__size-option {
+  display: none;
+}
+
+.cart-filter__label {
+  display: inline-block;
+  width: 82px;
+  padding: 15px 0;
+  border: 2px solid @gray;
+  text-align: center;
+  .set-font(17px, 16px, bold, @black);
+}
+
+.cart-filter__item .cart-filter__input:checked + label {
+  border: 2px solid @turquoise;
+}//???????????доделать состояние checked
+
+.cart-filter__add {
+  display: block;
+  width: 260px;
+  height: 52px;
+  text-align: center;
+  .set-font(17px, 16px, bold, @white, uppercase);
+  background-color: @turquoise;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+@media (min-width: 750px) {
+  .cart-filter__wrapper {
+    width: 566px;
+    margin-left: -283px;
+  }
+
+  .cart-filter__header {
+    width: 355px;
+    .set-font(30px, 57px, bold, @black, uppercase);
+  }
+
+  ul.cart-filter__list {
+    width: 350px;
+  }
+
+  .cart-filter__label {
+    width: 112px;
+  }
+
+  .cart-filter__add {
+    width: 350px;
+  }
+}

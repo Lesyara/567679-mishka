@@ -12,7 +12,11 @@
   <header class="main-header">
     <nav class="main-header__wrapper content-wrapper">
       <a class="main-header__logo">
-        <img class="main-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Магазин вязаных игрушек и аксессуаров для дома">
+        <picture class="main-header__logo-image">
+          <source media="(min-width: 1050px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 750px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин вязаных игрушек и аксессуаров для дома">
+        </picture>
       </a>
       <button class="main-header__toggle-menu main-header__toggle-menu--open">Открыть меню</button>
       <ul class="main-header__menu main-header__menu--closed">
@@ -97,7 +101,11 @@
               <span class="promo-product__feature-value">15 см</span>
             </li>
           </ul>
-          <img class="promo-product__image" src="img/content/triple-set-mobile@1x.jpg" width="260" height="315" alt="Три вязаные корзинки разных">
+          <picture class="promo-product__image">
+              <source media="(min-width: 1050px)" srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 750px)" srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
+              <img src="img/content/triple-set-mobile@1x.jpg" srcset="img/content/triple-set-mobile@2x.jpg" alt="Три вязаные корзинки разных">
+          </picture>
           <div class="promo-product__price">Цена: 990 руб.</div>
           <a class="promo-product__order ghost-button ghost-button--big">заказать</a>
         </div>
@@ -107,12 +115,12 @@
       <div class="summary__wrapper content-wrapper">
         <h2 class="summary__header">Коротко о нас:</h2>
         <ul class="summary__list">
-          <li class="summary__item">Экологически<br> чистые материалы</li>
-          <li class="summary__item">Связано вручную с любовью и умилением</li>
-          <li class="summary__item">Скандинавский стиль по российской цене</li>
-          <li class="summary__item">Поддержка отечественного производителя</li>
-          <li class="summary__item">Увеличивает лайки на фотографиях</li>
-          <li class="summary__item">Поставляется в подарочной упаковке</li>
+          <li class="summary__item summary__item--eco">Экологически<br> чистые материалы</li>
+          <li class="summary__item summary__item--hand-made">Связано вручную с любовью и умилением</li>
+          <li class="summary__item summary__item--style">Скандинавский стиль по российской цене</li>
+          <li class="summary__item summary__item--native">Поддержка отечественного производителя</li>
+          <li class="summary__item summary__item--likes">Увеличивает лайки на фотографиях</li>
+          <li class="summary__item summary__item--packaging">Поставляется в подарочной упаковке</li>
         </ul>
       </div>
     </section>
@@ -163,7 +171,11 @@
           </li>
         </ul>
         <div class="contacts__map-wrapper">
-          <img src="img/map-mobile@1x.jpg" width="322" height="457" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          <picture>
+            <source media="(min-width: 1050px)" srcset="img/content/map-desktop@1x.jpg 1x, img/content/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 750px)" srcset="img/content/map-tablet@1x.jpg 1x, img/content/map-tablet@2x.jpg 2x">
+            <img src="img/content/map-mobile@1x.jpg" srcset="img/content/map-mobile@2x.jpg 2x" alt="адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          </picture>
         </div>
         <a class="contacts__mail ghost-button ghost-button--big">напишите нам</a>
       </div>
@@ -227,30 +239,30 @@
       </div>
     </div>
   </footer>
-  <section class="cart-filter popup popup--hidden">
-    <div class="content-wrapper">
+  <section class="cart-filter">
+    <div class="cart-filter__wrapper popup popup--hide">
       <h2 class="cart-filter__header">Добавить в корзину</h2>
       <form class="cart-filter__form">
         <p class="cart-filter__text">Выберите размер:</p>
         <ul class="cart-filter__list">
           <li class="cart-filter__item">
-            <label class="cart-filter__label">S</label>
-            <input class="cart-filter__size-option" type="radio" name="input-size" value="S" />
+            <label class="cart-filter__label" for="cart-filter__size-option-s">S</label>
+            <input class="cart-filter__size-option" id="cart-filter__size-option-s" type="radio" name="input-size" value="S" checked/>
           </li>
           <li class="cart-filter__item">
-            <label class="cart-filter__label">M</label>
-            <input class="cart-filter__size-option" type="radio" name="input-size" value="M" />
+            <label class="cart-filter__label" for="cart-filter__size-option-m">M</label>
+            <input class="cart-filter__size-option" id="cart-filter__size-option-m" type="radio" name="input-size" value="M" />
           </li>
           <li class="cart-filter__item">
-            <label class="cart-filter__label">L</label>
-            <input class="cart-filter__size-option" type="radio" name="input-size" value="L" />
+            <label class="cart-filter__label" for="cart-filter__size-option-l">L</label>
+            <input class="cart-filter__size-option" id="cart-filter__size-option-l" type="radio" name="input-size" value="L" />
           </li>
         </ul>
         <button class="cart-filter__add" type="submit">Добавить</button>
       </form>
     </div>
+    <div class="popup__back popup__back--hide"></div>
   </section>
-  <div class="light-wrapper light-wrapper--hidden"></div>
   <script src="js/script.js"></script>
 </body>
 </html>

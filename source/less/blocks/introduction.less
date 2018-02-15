@@ -7,6 +7,10 @@
   background-position-x: 50%;
   background-position-y: -20px;
   background-size: 575px auto;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 }
 
 .introduction__header {
@@ -26,6 +30,20 @@
   background-color: #63d1bb;
 }
 
+.introduction__ref-item--interior .introduction__ref {
+  background-image: url("../img/icon-interior.svg");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: 86% center;
+}
+
+.introduction__ref-item--toys .introduction__ref {
+  background-image: url("../img/icon-toy.svg");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: 89% center;
+}
+
 .introduction__ref {
   .set-font(19px, 24px, bold, @white);
   display: block;
@@ -42,11 +60,28 @@
 @media (min-width: 750px) {
   .introduction {
     background: @white-gray;
+    background-image: url("../img/hero-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position-x: 50%;
-    background-image: url("../img/hero-desktop@1x.jpg");
     background-position-y: -1px;
     background-size: 1150px auto;
+    position: relative;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+    }
+  }
+
+  .introduction::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    height: 22px;
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/bg-zigzag-fill.svg");
   }
 
   .introduction__header {
@@ -66,11 +101,12 @@
   }
 
   .introduction__ref {
+    .set-font(19px, 30px, bold, @white);
     background-color: @turquoise;
-  }
 
-  .introduction__ref--active {
-    background-color: @turquoise-overlay;
+    &--active {
+      background-color: @turquoise-overlay;
+    }
   }
 
   .introduction__ref-list {
@@ -83,7 +119,12 @@
   .introduction {
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position-y: -1px;
+    background-repeat: no-repeat;
     background-size: 1150px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 
   .introduction__header {
@@ -106,8 +147,16 @@
   .introduction__ref {
     padding-left: 37px;
     padding-top: 31px;
-    padding-bottom: 27px;
+    padding-bottom: 34px;
     line-height: 29px;
+  }
+
+  .introduction__ref-item--interior .introduction__ref {
+    background-position: 92% center;
+  }
+
+  .introduction__ref-item--toys .introduction__ref {
+    background-position: 92% center;
   }
 
   .introduction__ref div {

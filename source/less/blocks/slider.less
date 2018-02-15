@@ -4,22 +4,20 @@
   border: 1px solid @light-gray;
 }
 
-.slider__control--backward {
+.slider__control {
   display: inline-block;
   font-size: 0;
   padding-top: 13px;
   padding-left: 38px;
   padding-right: 38px;
-  border-right: 1px solid #ececec;
+  width: 49%;
+  text-align: center;
+
+  &--backward {
+    border-right: 1px solid #ececec;
+  }
 }
 
-.slider__control--forward {
-  display: inline-block;
-  font-size: 0;
-  padding-top: 13px;
-  padding-left: 38px;
-  padding-right: 38px;
-}
 
 @media (min-width: 750px) {
   .slider__controls {
@@ -30,6 +28,7 @@
   }
 
   .slider__control {
+    width: initial;
     padding-right: 0;
     font-size: 0;
   }
@@ -38,7 +37,3 @@
     border: none;
   }
 }
-
-/*@media (min-width:1050px) {
-
-}*/
