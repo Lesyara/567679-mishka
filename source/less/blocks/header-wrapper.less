@@ -6,13 +6,27 @@
 
 @media (min-width: 750px) {
   .header-wrapper {
+    position: relative;
     padding: 94px 36px 75px;
     background-color: @gray;
+    z-index: 0;
+  }
+
+  .header-wrapper::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    width: 100%;
+    height: 22px;
+    left: 0;
+    bottom: 0;
+    background-image: url("../img/bg-zigzag-fill.svg");
   }
 }
 
 @media (min-width: 1050px) {
   .header-wrapper {
-    padding: 92px 36px 100px;
+    padding: 92px 36px 108px;
   }
 }

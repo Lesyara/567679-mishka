@@ -1,5 +1,20 @@
 .contacts__wrapper {
   padding: 0;
+  position: relative;
+}
+
+.contacts__wrapper::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+  width: 320px;
+  height: 6px;
+  left: 0;
+  top: 39px;
 }
 
 .contacts__header {
@@ -45,11 +60,36 @@ ul.contacts__list {
 }
 
 @media (min-width: 750px) {
+  .contacts__wrapper::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    transform: rotateX(180deg);
+    width: 100%;
+    height: 16px;
+    left: 0;
+    top: 52px;
+  }
+
   .contacts__header {
+    position: relative;
     .set-font(43px, 50px, bold, @black);
     padding-top: 112px;
     padding-bottom: 49px;
     padding-left: 51px;
+  }
+
+  .contacts__header::before {
+    content: "";
+    width: 47px;
+    height: 81px;
+    position: absolute;
+    background-image: url("../img/icon-flag.svg");
+    top: 46%;
+    right: 7%;
   }
 
   ul.contacts__list {
@@ -88,12 +128,37 @@ ul.contacts__list {
     height: 457px;
   }
 
+  .contacts__wrapper::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    transform: rotateX(180deg);
+    background-size: contain;
+    width: 100%;
+    height: 23px;
+    left: 0;
+    top: -93px;
+  }
+
   .contacts__header {
     padding-top: 72px;
     padding-left: 0;
     .set-font(53px, 57px, bold, @black);
     width: 355px;
     order: 1;
+  }
+
+  .contacts__header::before {
+    content: "";
+    width: 47px;
+    height: 81px;
+    position: absolute;
+    background-image: url("../img/icon-flag.svg");
+    top: 34%;
+    left: -111px;
   }
 
   ul.contacts__list {
