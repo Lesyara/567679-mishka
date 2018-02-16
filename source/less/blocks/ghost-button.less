@@ -7,12 +7,23 @@
   padding-top: 15px;
   padding-bottom: 13px;
   margin: 0 auto;
+
+  &--big {
+    width: 260px;
+  }
+
+  &--small {
+    width: 192px;
+  }
+
+  &:hover {
+    color: @white;
+    background-color: @dark-gray;
+  }
+
+  &:focus,
+  &:active {
+    color: @white03;
+  }
 }
 
-.ghost-button--big {
-  width: 260px;
-}
-
-.ghost-button--small {
-  width: 192px;
-}
