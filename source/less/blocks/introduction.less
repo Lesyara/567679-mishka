@@ -48,9 +48,19 @@
   .set-font(19px, 24px, bold, @white);
   display: block;
   padding-left: 29px;
+  padding-right: 180px;
   padding-top: 26px;
   padding-bottom: 29px;
-  padding-right: 180px;
+
+  /* &:hover {
+    transform: translateY(-34px);
+    padding-bottom: 34px;
+  }*/
+
+  &:active,
+  &:focus {
+    color: @white03;
+  }
 }
 
 .introduction__ref--active {
