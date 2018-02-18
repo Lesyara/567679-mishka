@@ -1,9 +1,16 @@
-.popup--hide {
-  display: none;
-}
 
-.popup--show {
-  display: block;
+.popup {
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  &--no-js {
+    display: none;
+  }
 }
 
 .popup__back {
@@ -13,7 +20,7 @@
   left: 0;
   position: fixed;
   background: @white09;
-  z-index: 200;
+  z-index: -1;
 
   &--show {
     display: block;

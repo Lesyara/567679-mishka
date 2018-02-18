@@ -46,9 +46,22 @@ ul.contacts__list {
   margin: 0;
 }
 
-.contacts__item:first-child a {
-  text-decoration: underline;
-  text-decoration-color: @turquoise;
+a.contacts__item-value {
+  cursor: pointer;
+}
+
+a.contacts__item-value .contacts__item-value-text {
+  border-bottom: 1px solid @turquoise;
+}
+
+a.contacts__item-value:hover .contacts__item-value-text {
+  color: @turquoise;
+}
+
+a.contacts__item-value:focus .contacts__item-value-text,
+a.contacts__item-value:active .contacts__item-value-text {
+  color: @turquoise03;
+  border-bottom: 1px solid @turquoise03;
 }
 
 .contacts__mail.ghost-button {
@@ -57,6 +70,17 @@ ul.contacts__list {
 
 .contacts__map-wrapper {
   margin-top: 8px;
+  position: relative;
+}
+
+.contacts__map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #bebebe;
+  border: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 750px) {
@@ -71,7 +95,7 @@ ul.contacts__list {
     width: 100%;
     height: 16px;
     left: 0;
-    top: 52px;
+    top: 30px;
   }
 
   .contacts__header {
@@ -107,7 +131,7 @@ ul.contacts__list {
   }
 
   .contacts__map-wrapper {
-    margin-top: 56px;
+    margin-top: 22px;
   }
 
   .contacts__mail.ghost-button {
@@ -168,8 +192,12 @@ ul.contacts__list {
     order: 2;
   }
 
+  .contacts__item-value {
+    width: 220px;
+  }
+
   .contacts__mail.ghost-button {
-    margin-top: 77px;
+    margin-top: 46px;
     margin-right: auto;
     margin-bottom: 0;
     margin-left: 0;

@@ -53,14 +53,18 @@ ul.cart-filter__list {
   display: inline-block;
   width: 82px;
   padding: 15px 0;
-  border: 2px solid @gray;
+  border: 2px solid @dark-gray01;
   text-align: center;
   .set-font(17px, 16px, bold, @black);
+
+  &:hover {
+    border-color: @dark-gray03;
+  }
 }
 
-.cart-filter__item .cart-filter__input:checked + label {
+.cart-filter__item .cart-filter__size-option:checked + label {
   border: 2px solid @turquoise;
-}//???????????доделать состояние checked
+}
 
 .cart-filter__add {
   display: block;
