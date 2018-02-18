@@ -137,7 +137,9 @@ ul.product-order__fields {
 
 .product-order__item--fio .product-order__input {
   display: inline-block;
-  border: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
   border-bottom: 2px solid @black;
   width: 100%;
   height: 52px;
@@ -146,7 +148,9 @@ ul.product-order__fields {
 
 .product-order__item--tel .product-order__input {
   display: inline-block;
-  border: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
   border-bottom: 2px solid @black;
   width: 100%;
   height: 52px;
@@ -157,7 +161,9 @@ ul.product-order__fields {
 
 .product-order__item--mail .product-order__input {
   display: inline-block;
-  border: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
   border-bottom: 2px solid @black;
   width: 100%;
   height: 52px;
@@ -187,11 +193,11 @@ ul.product-order__fields {
 .product-order__item--fio .product-order__input:hover,
 .product-order__item--tel .product-order__input:hover,
 .product-order__item--mail .product-order__input:hover {
-  border-bottom: 2px solid @turquoise;
+  border-bottom-color: @turquoise;
 }
 
 .product-order__item--other .product-order__input:hover {
-  border: 2px solid @turquoise;
+  border-color: @turquoise;
 }
 
 .product-order__item--fio .product-order__input::placeholder,
@@ -283,7 +289,7 @@ ul.product-order__fields {
   }
 
   .product-order__item--color .product-order__fields {
-    flex-basis: 175px;
+    flex-basis: 470px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -291,10 +297,6 @@ ul.product-order__fields {
     height: 228px;
     margin-top: 51px;
     margin-bottom: 25px;
-  }
-
-  .product-order__item--color .product-order__field {
-    margin-bottom: 0;
   }
 
   .product-order__input[type="checkbox"]+label::before,
