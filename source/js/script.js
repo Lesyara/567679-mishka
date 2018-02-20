@@ -77,6 +77,12 @@ if (cart_links) {
   }
 }
 
+popup_back.addEventListener("click",function(evt) {
+  evt.preventDefault();
+  hide_popup();
+});
+
+
 function show_popup() {
   popup.classList.remove("popup--hide");
   popup_back.classList.remove("popup__back--hide");
