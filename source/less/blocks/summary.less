@@ -1,5 +1,6 @@
 .summary__wrapper {
   position: relative;
+  margin-bottom: 35px;
 }
 
 .summary__wrapper::before {
@@ -10,15 +11,15 @@
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
   background-size: contain;
-  width: 320px;
+  width: 100%;
   height: 6px;
   left: 0;
-  top: 26px;
+  top: 0;
 }
 
 .summary__header {
   margin: 0;
-  padding-top: 70px;
+  padding-top: 35px;
   .set-font(25px, 30px, bold, @black);
 }
 
@@ -73,12 +74,12 @@
     width: 100%;
     height: 16px;
     left: 0;
-    top: 52px;
+    top: 0;
   }
 
   .summary__header {
     .set-font(43px, 50px, bold, @black);
-    padding-top: 116px;
+    padding-top: 66px;
   }
 
   .summary__list {
@@ -94,27 +95,27 @@
     .set-font(20px, 22px, bold, @black);
 
     &--eco {
-      background-position: 3% 45%;
+      background-position: 10px 49px;
     }
 
     &--hand-made {
-      background-position: 3% 45%;
+      background-position: 0 56px;
     }
 
     &--style {
-      background-position: 3% 45%;
+      background-position: 0 56px;
     }
 
     &--native {
-      background-position: 3% 45%;
+      background-position: 0 56px;
     }
 
     &--likes {
-      background-position: 3% 45%;
+      background-position: 10px 62px;
     }
 
     &--packaging {
-      background-position: 3% 45%;
+      background-position: 0 56px;
     }
   }
 
@@ -141,14 +142,11 @@
     width: 100%;
     height: 23px;
     left: 0;
-    top: 77px;
+    top: 33px;
   }
 
   .summary__header {
-    padding-top: 159px;
-    .set-font(53px,
-    57px,
-    bold,
-    @black);
+    padding-top: 116px;
+    .set-font(53px, 57px, bold, @black);
   }
 }

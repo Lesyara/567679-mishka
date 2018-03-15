@@ -1,7 +1,7 @@
 var main_menu = document.querySelector(".main-header__menu");
 var user_menu = document.querySelector(".main-header__user-menu");
 var toogle_menu_button = document.querySelector(".main-header__toggle-menu");
-var promo_button = document.querySelector(".promo-product__order");
+var promo_button = document.querySelector(".promo-product__order-button");
 var cart_links = document.querySelectorAll(".product__add-to-cart");
 var add_to_cart_button = document.querySelector("button.cart-filter__add");
 var popup = document.querySelector(".popup");
@@ -81,7 +81,6 @@ popup_back.addEventListener("click",function(evt) {
   evt.preventDefault();
   hide_popup();
 });
-
 
 function show_popup() {
   popup.classList.remove("popup--hide");

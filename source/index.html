@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link href="css/style.min.css" rel="stylesheet" type="text/css">
   <script src="js/picturefill.min.js" async></script>
@@ -22,10 +22,10 @@
       <button class="main-header__toggle-menu main-header__toggle-menu--close main-header__toggle-menu--no-js">Закрыть меню</button>
       <ul class="main-header__menu main-header__menu--open main-header__menu--no-js">
         <li class="main-header__menu-item">
-          <a class="main-header__link main-header__link--catalog" href="catalog.html">Каталог товаров</a>
+          <a class="main-header__link main-header__link--catalog" href="catalog.html"><span>Каталог товаров</span></a>
         </li>
         <li class="main-header__menu-item">
-          <a class="main-header__link main-header__link--order" href="form.html">Вязание на заказ</a>
+          <a class="main-header__link main-header__link--order" href="form.html"><span>Вязание на заказ</span></a>
         </li>
       </ul>
       <ul class="main-header__user-menu main-header__user-menu--open main-header__user-menu--no-js">
@@ -91,28 +91,32 @@
           <div class="promo-product__label">Товар недели</div>
         </div>
         <div class="promo-product__body-wrapper">
-          <p class="promo-product__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <ul class="promo-product__features-list">
-            <li class="promo-product__feature-item">
-              <span class="promo-product__feature-name">Цвет:</span>
-              <span class="promo-product__feature-value">«Тиффани»/серый</span>
-            </li>
-            <li class="promo-product__feature-item">
-              <span class="promo-product__feature-name">Диаметр:</span>
-              <span class="promo-product__feature-value">25 см</span>
-            </li>
-            <li class="promo-product__feature-item">
-              <span class="promo-product__feature-name">Высота:</span>
-              <span class="promo-product__feature-value">15 см</span>
-            </li>
-          </ul>
+          <div class="promo-product__description">
+            <p class="promo-product__features-text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <ul class="promo-product__features-list">
+              <li class="promo-product__feature-item">
+                <span class="promo-product__feature-name">Цвет:</span>
+                <span class="promo-product__feature-value">«Тиффани»/серый</span>
+              </li>
+              <li class="promo-product__feature-item">
+                <span class="promo-product__feature-name">Диаметр:</span>
+                <span class="promo-product__feature-value">25 см</span>
+              </li>
+              <li class="promo-product__feature-item">
+                <span class="promo-product__feature-name">Высота:</span>
+                <span class="promo-product__feature-value">15 см</span>
+              </li>
+            </ul>
+          </div>
           <picture class="promo-product__image">
             <source media="(min-width: 1050px)" srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 750px)" srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
             <img src="img/content/triple-set-mobile@1x.jpg" srcset="img/content/triple-set-mobile@2x.jpg" alt="Три вязаные корзинки разных">
           </picture>
-          <div class="promo-product__price">Цена: 990 руб.</div>
-          <a class="promo-product__order ghost-button ghost-button--big">заказать</a>
+          <div class="promo-product__order">
+            <div class="promo-product__price">Цена: 990 руб.</div>
+            <a class="promo-product__order-button ghost-button ghost-button--big">заказать</a>
+          </div>
         </div>
       </div>
     </section>

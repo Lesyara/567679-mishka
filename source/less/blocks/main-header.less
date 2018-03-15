@@ -5,8 +5,10 @@
 }
 
 .main-header__toggle-menu {
+  position: absolute;
+  right: 31px;
+  top: 30px;
   border: none;
-  vertical-align: 20px;
   width: 21px;
   height: 20px;
   font-size: 0;
@@ -47,7 +49,7 @@
 
 .main-header__logo {
   display: inline-block;
-  padding: 22px 64px 16px 87px;
+  padding: 22px 87px 16px 87px;
   opacity: 1;
 
   &:hover {
@@ -85,11 +87,7 @@
 }
 
 .main-header__menu-item {
-  text-align: left;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  padding-left: 30px;
-  border-bottom: 1px solid @light-gray;
+  border-top: 1px solid @light-gray;
 }
 
 .main-header__user-menu {
@@ -108,14 +106,42 @@
   text-align: left;
   padding-top: 27px;
   padding-bottom: 27px;
-  padding-left: 27px;
-  border-bottom: 1px solid @light-gray;
+  border-top: 1px solid @light-gray;
 }
 
 .main-header__user-menu-item .main-header__link {
   padding: 0;
 }
 
+.main-header__link {
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  .set-font(17px, 24px, bold, @black);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: @black06;
+  }
+
+  &:active,
+  &:focus {
+    color: @black03;
+  }
+}
+
+.main-header__link span {
+  padding-left: 77px;
+}
+
+.main-header__link--search span,
+.main-header__link--cart span {
+  padding-left: 54px;
+}
 
 .main-header__link--cart path {
   fill: @black02;
@@ -130,7 +156,6 @@
   fill: @turquoise03;
 }
 
-
 .main-header__link--search path {
   fill: @black02;
 }
@@ -144,27 +169,6 @@
   fill: @turquoise03;
 }
 
-.main-header__user-menu-item span {
-  padding-left: 25px;
-}
-
-
-a.main-header__link {
-  .set-font(17px, 24px, bold, @black);
-  text-decoration: none;
-  padding-left: 42px;
-  cursor: pointer;
-
-  &:hover {
-    color: @black06;
-  }
-
-  &:active,
-  &focus {
-    color: @black03;
-  }
-}
-
 .main-header__aside {
   display: none;
   z-index: 100;
@@ -173,6 +177,10 @@ a.main-header__link {
 .main-header nav {
   display: block;
   text-align: center;
+}
+
+.main-header__icon {
+  transform: translateX(34px);
 }
 
 @media (min-width: 750px) {
@@ -189,10 +197,8 @@ a.main-header__link {
   }
 
   .main-header__logo {
-    flex-basis: 309px;
-    padding: 0;
-    padding-top: 22px;
-    padding-bottom: 24px;
+    flex-basis: 319px;
+    padding: 22px 0 13px;
     text-align: start;
   }
 
@@ -201,21 +207,40 @@ a.main-header__link {
     height: 46px;
   }
 
-  .main-header__icon {
-    width: 18px;
-    height: 18px;
+  .main-header__menu {
+    order: 3;
+    display: flex;
+    flex-basis: 340px;
   }
 
-  a.main-header__link {
+  .main-header__menu-item {
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 0;
     padding-left: 0;
+    border-top: none;
+  }
+
+  .main-header__menu .main-header__link {
+    .set-font(15px, 24px, bold, @black);
+  }
+
+  .main-header__link {
+    width: auto;
+    padding: 0;
 
     &--search {
       font-size: 0;
+      transform: translate(-2px, 4px);
     }
 
     &--order {
       padding-left: 35px;
     }
+  }
+
+  .main-header__link span {
+    padding-left: 0;
   }
 
   .main-header__toggle-menu {
@@ -236,7 +261,7 @@ a.main-header__link {
     border-bottom: none;
 
     &--search {
-      flex-basis: 82px;
+      flex-basis: 85px;
       border-left: 1px solid @gray;
       border-right: 1px solid @gray;
     }
@@ -246,33 +271,24 @@ a.main-header__link {
     }
   }
 
-  .main-header__menu {
-    order: 3;
-    display: flex;
-    flex-basis: 340px;
+  .main-header__icon {
+    width: 18px;
+    height: 18px;
+
+    &--cart {
+      transform: translate(-26px, 4px);
+    }
   }
 
-  .main-header__menu-item {
-    text-align: center;
-    padding-top: 5px;
-    padding-bottom: 0;
-    padding-left: 0;
-    border-bottom: none;
-  }
-
-  .main-header__menu .main-header__link {
-    .set-font(15px, 24px, bold, @black);
-  }
-
-  .main-header__link--cart {
-    padding-left: 31px;
+  .main-header__user-menu-item .main-header__link--cart {
+    padding-left: 50px;
   }
 
   .main-header__info {
     display: flex;
     flex-basis: 233px;
     order: 4;
-    padding-top: 5px;
+    padding-top: 18px;
     z-index: 100;
   }
 }

@@ -1,6 +1,7 @@
 .production__wrapper {
-  border: 1px solid @gray;
-  margin-bottom: 59px;
+  width: 262px;
+  margin: 0 auto 59px;
+  border: 1px solid #f1f1f1;
 }
 
 .production__header {
@@ -38,7 +39,6 @@
   left: 50%;
   margin-left: -50px;
   margin-top: -38px;
-  background-image: url("../img/icon-play.svg");
 
   &:hover {
     transform: scale(1.2);
@@ -47,7 +47,14 @@
   &:active,
   &:focus {
     transform: scale(0.8);
-    opacity: 0.3;
+  }
+
+  &:active .production__video-icon path:first-child {
+    fill: #d0f1ea;
+  }
+
+  &:focus .production__video-icon path:first-child {
+    fill: #d0f1ea;
   }
 }
 
@@ -85,6 +92,7 @@
   .production__wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin-bottom: 62px;
   }
 
